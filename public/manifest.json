@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tonight's Dinner",
+  "name": "Let app choose your tonight's dinner",
   "icons": [
     {
       "src": "favicon.ico",

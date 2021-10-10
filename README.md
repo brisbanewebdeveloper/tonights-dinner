@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Tonight's Dinner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My first React based web application.
 
-## Available Scripts
+## Background
 
-In the project directory, you can run:
+- The other day, I saw [someone else's tweet saying she made a matrix for another person to let him choose the dinner instead of her coming up with what they are going eat tonight](https://twitter.com/yuyutamto/status/1439463611861135366).
 
-### `npm start`
+- Since I had never built a web application with [React](https://reactjs.org/) before, I decided to build one with the tweet.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- With this web application, he does not even have to choose the dinner because the app chooses one for them.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to use
 
-### `npm test`
+- Open the web application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Each section represents the type of food, like Chinese Cuisine.
 
-### `npm run build`
+- If you click/tap the header area, the web application randomly chooses the food from the section.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm run build
+sudo npm install -g serve
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# To run via "http://localhost:5000"
+serve -s build
 
-### `npm run eject`
+# To run via "http://192.168.0.1:5000"
+# (Change "192.168.0.1:5000"" to whatever it suits to your situation)
+serve -l tcp://192.168.0.1:5000/ -s build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Dev Time
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A couple of days including the time I read the books about [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/).

@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+
+// eslint-disable-next-line strict
+'use strict';
+
+require('dotenv').config();
+
+const {
+  CF_EMAIL: email,
+  CF_TOKEN: token,
+  CF_ZONE_ID: zoneId,
+} = process.env;
+
+if (!email || !token || !zoneId) {
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log('CF_EMAIL and/or CF_TOKEN and/or CF_ZONE_ID not found');
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  process.exit(1);
+}
+
+const axios = require('axios');
+
+const options = {
+  url: `https://api.cloudflare.com/client/v4/zones/${zoneId}/purge_cache`,
+  method: 'delete',
+  headers: {
+    'X-Auth-Email': email,
+    'X-Auth-Key': token,
+  },
+  data: {
+    purge_everything: true,
+  },
+};
+
+(async () => {
+
+  try {
+
+    const res = await axios(options);
+
+    if ( ! res && ! res.status) {
+      console.error('CloudFlare not responding');
+    }
+
+    if (res.status !== 200 || res.data.result === 'error') {
+      console.error('Cloud Flare Error (2)', res.body.errors);
+    }
+
+    console.log('Deleted the cache at Cloud Flare');
+
+  } catch (err) {
+    if (err) {
+      console.error('Cloud Flare Error (1)', err.message);
+    }
+  }
+
+  process.exit(0);
+
+})();
