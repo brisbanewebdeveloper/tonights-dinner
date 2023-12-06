@@ -8,7 +8,7 @@ import { findIcon } from './LoadFa';
 import { Category, Food } from './Data';
 import FoodItem from './FoodItem';
 
-const iconRun = findIcon({prefix: 'fas', iconName: 'recycle'});
+const iconRun = findIcon({ prefix: 'fas', iconName: 'recycle' });
 
 type Props = {
   category: Category;
@@ -16,7 +16,7 @@ type Props = {
 };
 type State = {
   selecting: Boolean;
-  selected: Food|null;
+  selected: Food | null;
 };
 
 class FoodItems extends Component<Props, State> {
