@@ -3,7 +3,7 @@
 // eslint-disable-next-line strict
 'use strict';
 
-require('dotenv').config();
+import 'dotenv/config';
 
 const {
   CF_EMAIL: email,
