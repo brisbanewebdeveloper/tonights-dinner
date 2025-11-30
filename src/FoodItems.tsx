@@ -90,11 +90,11 @@ class FoodItems extends Component<Props, State> {
    */
   render() {
     return (
-      <div className="card">
+      <div className="border border-gray-200 rounded-lg shadow-sm">
 
         {
           <a
-            className="card-header"
+            className="block px-4 py-3 text-xl no-underline bg-gray-100 border-b border-gray-200 rounded-t-lg hover:bg-green-600 hover:text-white transition-colors"
             href="#!"
             onClick={this.startSelecting}
           >
@@ -107,20 +107,20 @@ class FoodItems extends Component<Props, State> {
           </a>
         }
 
-        <div className="card-body">
+        <div className="p-4">
 
           {
             (this.state.selecting || this.state.selected) &&
-            <div className="list-group list-group-selected">
+            <div className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
               <div
-                className="list-group-item list-group-item-danger"
+                className="px-4 py-2 bg-red-100 text-red-800 border-red-200"
               >
                 {this.state.selected?.name}
               </div>
             </div>
           }
 
-          <div className="list-group">
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
             {this.props.foods.map((food: Food, key) => (
               <FoodItem
                 key={key}
