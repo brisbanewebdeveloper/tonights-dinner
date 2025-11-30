@@ -4,6 +4,7 @@
 'use strict';
 
 import 'dotenv/config';
+import axios from 'axios';
 
 const {
   CF_EMAIL: email,
@@ -17,8 +18,6 @@ if (!email || !token || !zoneId) {
   console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   process.exit(1);
 }
-
-const axios = require('axios');
 
 const options = {
   url: `https://api.cloudflare.com/client/v4/zones/${zoneId}/purge_cache`,
