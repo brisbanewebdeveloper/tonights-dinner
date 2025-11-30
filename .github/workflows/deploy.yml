@@ -19,4 +19,4 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOY_PATH }}
             git pull origin master
-            npm run build && ./cfclear
+            nvm use && npm run build && ./cfclear
