@@ -13,5 +13,19 @@ export default defineConfig(({ mode }) => {
     server: {
       host: env.HOST || 'localhost',
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom'],
+            'vendor-fontawesome': [
+              '@fortawesome/fontawesome-svg-core',
+              '@fortawesome/free-solid-svg-icons',
+              '@fortawesome/react-fontawesome',
+            ],
+          },
+        },
+      },
+    },
   }
 })

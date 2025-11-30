@@ -7,7 +7,8 @@
 // - It may also work if app imports the SCSS Files in "App.scss"
 //
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+// Import only the specific icons needed instead of the entire icon set
+import { faRecycle } from '@fortawesome/free-solid-svg-icons';
 
 import {
   IconLookup,
@@ -15,7 +16,8 @@ import {
   findIconDefinition
 } from '@fortawesome/fontawesome-svg-core';
 
-library.add(fas);
+// Add only the icons that are used in the app
+library.add(faRecycle);
 
 export function findIcon (iconLookup: IconLookup): IconDefinition {
   return findIconDefinition(iconLookup);
