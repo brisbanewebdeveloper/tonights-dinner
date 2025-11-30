@@ -1,6 +1,6 @@
 
 // import logo from './logo.svg';
-import './App.scss';
+import './App.css';
 
 import { Categories, Menus } from './Data';
 import FoodItems from './FoodItems';

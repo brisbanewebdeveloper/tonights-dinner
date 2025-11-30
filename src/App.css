@@ -1,6 +1,4 @@
 
-@import 'bootstrap/scss/bootstrap.scss';
-
 header {
   padding: 1rem 0;
 }
@@ -19,8 +17,8 @@ header {
     }
 
     &:hover {
-      color: $white;
-      background-color: $green;
+      color: #fff;
+      background-color: #198754;
     }
   }
 
