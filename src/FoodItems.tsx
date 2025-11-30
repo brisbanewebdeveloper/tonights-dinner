@@ -28,9 +28,9 @@ class FoodItems extends Component<Props, State> {
   };
 
   // Main Timer ID to start/stop selecting the food
-  timerId: NodeJS.Timeout | null = null;
+  timerId: ReturnType<typeof setTimeout> | null = null;
   // Timer ID to handle the animation
-  timerIdSelect: NodeJS.Timeout | null = null;
+  timerIdSelect: ReturnType<typeof setTimeout> | null = null;
   // Number of foods for the section
   foodLength: number = 0;
 
