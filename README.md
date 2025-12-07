@@ -25,6 +25,18 @@ npm run build
 npm run preview
 ```
 
+## Testing
+
+```
+npm run test
+```
+
+Run tests once (without watch mode):
+
+```
+npm run test -- --run
+```
+
 ## Dev Time
 
 A couple of days including the time I read the books about [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/).
